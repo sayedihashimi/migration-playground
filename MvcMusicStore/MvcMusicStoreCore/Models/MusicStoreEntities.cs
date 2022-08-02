@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace MvcMusicStore.Models
+namespace MvcMusicStore.Models  
 {
-    public class MusicStoreEntities : DbContext
-    {
+    public class MusicStoreEntities : IdentityDbContext {
 
         // Specify the name of the connections string which will be added in web.config
-        public MusicStoreEntities() : base("MusicStoreEntities")
+        public MusicStoreEntities() : base()
         {
         }
 
