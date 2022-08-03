@@ -12,6 +12,7 @@ namespace MvcMusicStore.Models
         public MusicStoreEntities() : base()
         {
         }
+        public MusicStoreEntities(DbContextOptions<MusicStoreEntities> options) : base(options) { }
 
         public DbSet<Album> Albums { get; set; }
         public DbSet<Artist> Artists { get; set; }
@@ -19,5 +20,16 @@ namespace MvcMusicStore.Models
         public DbSet<Cart> Carts { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder) {
+            //   dbContextOptionsBuilder.UseSqlServer(_connectionString);
+            var configuration = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json")
+            .Build();
+
+            var connectionString = configuration.GetConnectionString("MusicStoreEntitiesDataBase");
+            dbContextOptionsBuilder.UseSqlServer(connectionString);
+        }
     }
 }
