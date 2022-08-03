@@ -25,6 +25,9 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <_MigrationKind>yarp</_MigrationKind>
+    <_MigrateToProjectPath>..\MvcFromTemplateNoAuthCore\MvcFromTemplateNoAuthCore.csproj</_MigrateToProjectPath>
+    <_MigrateToProjectGuid>9fcc51a4-6d8a-4757-9b28-51a7fac2271e</_MigrateToProjectGuid>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
