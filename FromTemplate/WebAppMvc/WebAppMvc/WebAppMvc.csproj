@@ -25,6 +25,8 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <_MigrateToProjectPath>..\WebAppMvcCore\WebAppMvcCore.csproj</_MigrateToProjectPath>
+    <_MigrateToProjectGuid>3938f3fa-4dc6-4475-ae0d-a67aa3d53e29</_MigrateToProjectGuid>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
